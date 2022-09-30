@@ -12,7 +12,7 @@ public class ArithmeticTest {     // Save as "ArithmeticTest.java"
       remainder = number1 % number2;
   
       // Print results
-      System.out.print("The sum, difference, product, quotient and remainder of ");  // Print description
+      System.out.println("The sum, difference, product, quotient and remainder of "  );  // Print description
       System.out.print(number1);      // Print the value of the variable
       System.out.print(" and ");
       System.out.print(number2);
