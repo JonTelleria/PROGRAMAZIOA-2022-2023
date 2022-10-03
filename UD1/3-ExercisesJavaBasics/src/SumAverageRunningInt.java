@@ -1,19 +1,21 @@
 public class SumAverageRunningInt {   // Save as "SumAverageRunningInt.java"
-   public static void main (String[] args) {
-      // Define variables
-      int sum = 0;          // The accumulated sum, init to 0
-      double average;       // average in double
-      final int LOWERBOUND = 1;
-      final int UPPERBOUND = 100;
-
-      // Use a for-loop to sum from lowerbound to upperbound
-      for (int number = LOWERBOUND; number <= UPPERBOUND; ++number) {
-            // The loop index variable number = 1, 2, 3, ..., 99, 100
-         sum += number;     // same as "sum = sum + number"
+public static void main(String[] args) {
+   final int LOWERBOUND = 1;
+   final int UPPERBOUND = 100;
+   int sumOdd  = 0;    // For accumulating odd numbers, init to 0
+   int sumEven = 0;    // For accumulating even numbers, init to 0
+   int number = LOWERBOUND;
+   while (number <= UPPERBOUND) {
+         // number = LOWERBOUND, LOWERBOUND+1, LOWERBOUND+2, ..., UPPERBOUND for each iteration
+      if (number % 2 == 0) {  // Even
+         sumEven += number;   // Same as sumEven = sumEven + number
+      } else {                // Odd
+         sumOdd += number;    // Same as sumOdd = sumOdd + number
       }
-      // Compute average in double. Beware that int / int produces int!
-      ......
-      // Print sum and average
-      ......
-   }
+      ++number;  // Next number
+   } 
+   // Print the result
+   System.out.println("The sum of numbers from " + LOWERBOUND + " to " + UPPERBOUND + " is " + (sumOdd + sumEven));
+   System.out.println("The average is " + ((sumOdd + sumEven)/((UPPERBOUND - LOWERBOUND) + 1.00)));
+}
 }
