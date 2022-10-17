@@ -4,7 +4,7 @@ public class Gurutzea {
     public static void main(String[] args) throws Exception {
     
         int size = 0;
-        int x, y;
+       
         
         
         Scanner in = new Scanner(System.in); 
@@ -14,21 +14,15 @@ public class Gurutzea {
 
         in.close();
 
-        for (y = 1; y <= size; y++){
+        for (int y = 1; y <= size; y++){
             
-            for ( x = 1; x <= size; x++){
+            for ( int x = 1; x <= size; x++){
                 
-                if ( (size + 1) %2 == x){
-                System.out.print("O "); 
-                if ( (size + 1) %2 == y ){
-                    System.out.print("O "); 
-                        
-                }
+                if((y == (size + 1) / 2) || (x == (size + 1) / 2)) 
+                System.out.print("0 ");
+                
                 else{
-                    System.out.print("."); }}
-                else{
-                System.out.print("."); 
-            
+                    System.out.print(". "); }
                 
         
                 }
@@ -41,4 +35,3 @@ public class Gurutzea {
         
 
     }
-}
