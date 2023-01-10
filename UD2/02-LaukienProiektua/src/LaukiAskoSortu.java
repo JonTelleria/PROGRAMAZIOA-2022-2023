@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class LaukiAskoSortu {
     public static void main(String[] args) {
-        int kont;
+        int zenb;
         Laukia[] laukiak;
 
         Scanner in = new Scanner(System.in);
         System.out.print("Zenbat karratu nahi dituzu?  ");
-        kont = in.nextInt();
+        zenb = in.nextInt();
 
-        laukiak = new Laukia[kont];
+        laukiak = new Laukia[zenb];
         
         for(int i = 0; i<laukiak.length; i++){
 
@@ -32,4 +32,5 @@ public class LaukiAskoSortu {
             System.out.printf("%5d %10d %10d %10d %10d %15s \n", x, laukiak[i].getZabalera(), laukiak[i].getAltuera(), laukiak[i].getAzalera(), laukiak[i].getPerimetroa(), laukiak[i].getMota() );
         }
     }
+    
 }

@@ -105,6 +105,30 @@ public class Laukia {
             marrazkia+= "\n";
         }
         return marrazkia;
+    }
+    public  boolean isBiggerThan(Laukia l) {
+
+        boolean handiago = false;
+
+        if (this.getAzalera() > l.getAzalera()) {
+            handiago = true;
+        }
+
+        return handiago;
+
+    }
+
+    public static Laukia getTheBiggest(Laukia[] lk) {
+        
+        Laukia max = lk[0];
+
+        for (int i = 1; i < lk.length && lk[i] != null; i++) {
+            if (lk[i].isBiggerThan(max)) {
+                max = lk[i];
+            }
+        }
+
+        return max;
     }}
 
 
