@@ -1,6 +1,8 @@
+package exekutagarriak;
+import model.MyPoint;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
+
 
 public class TestMyPoint {
 
@@ -13,6 +15,10 @@ public class TestMyPoint {
         System.out.println(" p0 =>" + p0);
         System.out.println(" p1 =>" + p1);
         System.out.println(" p2 =>" + p2);
+        if (p1.equals(p2)) {
+            System.out.println("Espazioko puntu berdina adierazten dute.");
+        }
+
 
         System.out.println("\nb) Distantziak koordenatu-jatorriarekiko:");
         System.out.println(" p0 =>" + p0.distance());
@@ -61,15 +67,20 @@ public class TestMyPoint {
 
         System.out.println(pArrayList);
 
+
+
         System.out.println("\nf) Sortu ausazko 5 puntuko sorta (0-9 tartean). java.util.Random klasearen .nextInt() metodoa erabili dezakezu.");
         MyPoint pArrayRandom[] = new MyPoint[5];
 
-        for (int i = 0¡; i < 5; i++) {
-            MyPoint pN = new MyPoint((int) (Math.random() * (9+1)), (int) (Math.random() * (9)));
+        for (int i = 0; i < 5; i++) {
+            MyPoint pN = new MyPoint((int) (Math.random() * (10)), (int) (Math.random() * (10)));
             pArrayRandom[i] = pN;
         }
 
         System.out.println(Arrays.toString(pArrayRandom));
 
+
+
+        
 }
 }
